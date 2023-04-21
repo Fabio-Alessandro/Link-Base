@@ -48,7 +48,7 @@ export default DropdownComponent;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#e5e5e5',
-    padding: 16,
+    padding: 16
   },
   dropdown: {
     width:322,
@@ -93,6 +93,7 @@ const styles = StyleSheet.create({
   iconStyle: {
     width: 20,
     height: 20,
+    marginRight: 25
   },
   inputSearchStyle: {
     height: 40,

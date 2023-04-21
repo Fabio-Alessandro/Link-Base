@@ -134,7 +134,7 @@ const Home: React.FC<OverviewProps> = ({ navigation }) => {
         <View>
         <View style={{flexDirection:"row", justifyContent:"space-between",position:"relative"}}>
         <SearchBar style={{ elevation: 3 }} onChangeText={handleSearch} />
-        <SearchIcon style={{ elevation: 3 }} />  
+        <SearchIcon style={{ marginBottom: 6, marginRight: 7,  elevation: 3 }} />  
         </View>      
         
         {searchResults.length === 0 ? (
