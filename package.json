@@ -1,0 +1,22 @@
+{
+  "name": "link-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server-setup": "sh server-setup.sh",
+    "client-setup": "sh client-setup.sh",
+    "server": "sh server-start.sh",
+    "client": "sh client-start.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fabio-Alessandro/Link-Base.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fabio-Alessandro/Link-Base/issues"
+  },
+  "homepage": "https://github.com/Fabio-Alessandro/Link-Base#readme"
+}

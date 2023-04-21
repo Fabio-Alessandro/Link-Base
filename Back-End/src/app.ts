@@ -36,7 +36,7 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
   res.status(500).send(`Error: ${err.errors[0].message}`);
 });
 
-DataBase.sync({ force: true }).then(() => {
+DataBase.sync().then(() => {
   console.log("db connected");
   app.listen(PORT, () => {
     console.log(`Server listening at port ${PORT}`);
