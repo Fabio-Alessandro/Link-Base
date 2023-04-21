@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {
   StyleSheet,
-  Text,
   View,
   TouchableOpacity,
   ActivityIndicator,
@@ -31,6 +30,7 @@ import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import jwtDecode from "jwt-decode";
 import { User } from "../../../components/ProviderScreen";
+import { Text } from "native-base";
 
 type ProfileDetailProps = {
   navigation: any; // o cualquier otro tipo de objeto de navegación que estés usando
@@ -63,7 +63,7 @@ const ProfileDetail: React.FC<ProfileDetailProps> = ({ navigation }) => {
 
   const handleLogout = () => {
     const title = "Confirmar";
-    const message = "Estás seguro que deseas cerrar sesión?";
+    const message = "¿Estás seguro que deseas cerrar sesión?";
     Alert.alert(title, message, [
       {
         text: "Cancelar",
@@ -105,7 +105,9 @@ const ProfileDetail: React.FC<ProfileDetailProps> = ({ navigation }) => {
           }}
         />
         <Title>{user.fullName}</Title>
-        <Description>{user.email}</Description>
+        <Text mt="18" mb="13" px="16" fontFamily="body" fontWeight="400" textAlign="center">
+          {user.email}
+        </Text>
         <Button onPress={() => navigation.navigate("Edit")}>
           <Text
             style={{
@@ -119,7 +121,7 @@ const ProfileDetail: React.FC<ProfileDetailProps> = ({ navigation }) => {
             Editar Perfil
           </Text>
         </Button>
-        <Line />
+        <Line style={{ marginTop: 45 }} />
         <View style={{ marginTop: 54, alignSelf: "flex-start" }}>
           <TouchableOpacity
             style={styles.options}

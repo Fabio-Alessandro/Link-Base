@@ -29,6 +29,7 @@ const Card = styled(ImageBackground)`
 `;
 
 const IndicatorContainer = styled.View`
+  margin-right: 35px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
