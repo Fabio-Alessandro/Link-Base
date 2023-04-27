@@ -199,7 +199,7 @@ Project Link: [https://github.com/Fabio-Alessandro/Link-Base](https://github.com
 [issues-shield]: https://img.shields.io/github/issues/Fabio-Alessandro/Link-Base.svg?style=for-the-badge
 [issues-url]: https://github.com/Fabio-Alessandro/Link-Base/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/Fabio-Alessandro/Link-Base/blob/main/LICENSE.txt
+[license-url]: https://github.com/Fabio-Alessandro/Link-Base/blob/main/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/fabio-alessandro-022a4a261/
 [TypeScript]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
