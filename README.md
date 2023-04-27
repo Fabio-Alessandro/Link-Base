@@ -12,7 +12,7 @@
 <div align="center">
   <br />
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="https://netglobal.tech/wp-content/uploads/2019/12/NetGlobal-Horizontal-Blanco.png" alt="Logo" width="400px">
+    <img src="https://netglobal.tech/wp-content/uploads/2020/12/NetGlobal-Horizontal-01.png" alt="Logo" width="400px">
   </a>
   
   <h3 align="center">Link Base</h3>
@@ -162,7 +162,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See `LICENSE.md` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
