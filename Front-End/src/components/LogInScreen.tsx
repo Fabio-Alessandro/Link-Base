@@ -34,6 +34,7 @@ const LogInScreen: React.FC<LogInProps> = ({ navigation, route }) => {
   const [showModalWrongCredentials, setShowModalWrongCredentials] =
     useState(false);
   const [logInError, setLogInError] = useState("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     setIsSubmitDisabled(true);
@@ -46,6 +47,7 @@ const LogInScreen: React.FC<LogInProps> = ({ navigation, route }) => {
   };
 
   const handleSubmit = async (): Promise<void> => {
+    setIsLoading(true)
     const logInRequestBody: LogInRequestBody = {
       email: emailInput,
       password: passwordInput,
@@ -58,7 +60,6 @@ const LogInScreen: React.FC<LogInProps> = ({ navigation, route }) => {
       );
       await AsyncStorage.setItem("token", user.data.token);
 
-      // Obtiene la información del usuario
       const value = await AsyncStorage.getItem("token");
       if (value !== null) {
         const decodedToken: any = jwtDecode(value);
@@ -67,9 +68,6 @@ const LogInScreen: React.FC<LogInProps> = ({ navigation, route }) => {
         );
         const user = response.data;
 
-        //console.log("USERSSS", user); // Aquí tienes acceso al usuario logueado
-
-        // Comprueba si el usuario es un admin y redirige a la pantalla de admin
         if (
           user.rol === "superAdmin" ||
           user.rol === "adminProviders" ||
@@ -91,7 +89,9 @@ const LogInScreen: React.FC<LogInProps> = ({ navigation, route }) => {
         // Si no se pudo obtener el token, muestra un mensaje de error
         throw new Error("No se pudo obtener el token");
       }
+      setIsLoading(false)
     } catch (error: any) {
+      setIsLoading(false)
       const errorMessage = error.response.data;
       const formattedErrorMessage =
         errorMessage.charAt(0).toUpperCase() + errorMessage.slice(1);
@@ -108,12 +108,12 @@ const LogInScreen: React.FC<LogInProps> = ({ navigation, route }) => {
       justifyContent="flex-start"
       bgColor="white"
     >
-      <Box px="39" pt="10" pb="6" flexDirection="row" alignItems="center">
+      <Box px="39" pt="18.8%" pb="6" flexDirection="row" alignItems="center">
         <Pressable onPress={() => navigation.navigate("Intro")}>
-          <ArrowBackIcon size="6" color="#464444" />
+          <ArrowBackIcon mt="0.5" size="6" color="#464444" />
         </Pressable>
         <Text
-          mx="50"
+          mx="60"
           fontFamily="body"
           fontSize="3xl"
           fontWeight="700"
@@ -124,7 +124,7 @@ const LogInScreen: React.FC<LogInProps> = ({ navigation, route }) => {
       </Box>
       <ScrollView>
         <VStack space={5} alignItems="center">
-          <Text px="16" fontFamily="body" fontWeight="400" textAlign="center">
+          <Text mt="2" mb="-1" px="16" fontFamily="body" fontWeight="400" textAlign="center">
             {isAdmin
               ? "LinkBase te permite encontrar y conectar con el proveedor indicado para hacer crecer tu negocio."
               : "Inicia sesión o crea una cuenta para empezar a conectar con proveedores cerca de ti"}
@@ -134,10 +134,9 @@ const LogInScreen: React.FC<LogInProps> = ({ navigation, route }) => {
               size="md"
               variant="filled"
               placeholder="Nombre de Usuario o Email"
-              shadow="2"
               borderRadius="15"
               width="320"
-              height="60"
+              height="59"
               isFocused={false}
               focusOutlineColor="none"
               _focus={{ bg: "none" }}
@@ -149,7 +148,6 @@ const LogInScreen: React.FC<LogInProps> = ({ navigation, route }) => {
               size="md"
               variant="filled"
               placeholder="Contraseña"
-              shadow="2"
               borderRadius="15"
               width="320"
               height="60"
@@ -181,14 +179,14 @@ const LogInScreen: React.FC<LogInProps> = ({ navigation, route }) => {
           </Pressable>
           <Box display="flex" flexDirection="row">
             <Button
-              disabled={isSubmitDisabled}
+              isLoading={isLoading}
+              disabled={isSubmitDisabled ? isSubmitDisabled : isLoading}
               onPress={handleSubmit}
               width="320"
-              height="60"
+              height="54"
               borderRadius="15"
               bg={isSubmitDisabled ? "#808080" : "#981D9A"}
               _pressed={{ bg: "#6f1570" }}
-              shadow="9"
             >
               <Text
                 fontFamily="heading"

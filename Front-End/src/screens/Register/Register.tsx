@@ -9,7 +9,7 @@ import {
 import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 import { ArrowLeftIcon } from "react-native-heroicons/solid";
 import axios from "axios";
-import { Button, Text } from "native-base";
+import { ArrowBackIcon, Button, Text } from "native-base";
 import { Title, Description, Input } from "./styles";
 import { RegisterProps } from "../../../App";
 import DropdownComponent from "../../components/Dropdown";
@@ -54,6 +54,7 @@ const Register: React.FC<RegisterProps> = ({ navigation }) => {
     charge: "",
   });
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   useEffect(() => {
     async function requestCompanies() {
@@ -82,6 +83,8 @@ const Register: React.FC<RegisterProps> = ({ navigation }) => {
   };
 
   const handleSubmit = async () => {
+    setIsLoading(true)
+
     const { passwordConfirm, company, ...profileData } = form;
     const requestBody: RegisterUser = {
       user: { ...profileData },
@@ -90,6 +93,8 @@ const Register: React.FC<RegisterProps> = ({ navigation }) => {
 
     try {
       await axios.post(`${process.env.IP_ADDRESS}/users/register`, requestBody);
+
+      setIsLoading(false)
 
       const title = "Aviso";
       const message = "¡Te has registrado con éxito!";
@@ -104,6 +109,7 @@ const Register: React.FC<RegisterProps> = ({ navigation }) => {
         },
       ]);
     } catch (error: any) {
+      setIsLoading(false)
       const title = "Aviso";
       const message = error.response.data;
 
@@ -143,21 +149,30 @@ const Register: React.FC<RegisterProps> = ({ navigation }) => {
           }}
         >
           <TouchableOpacity onPress={() => navigation.navigate("Intro")}>
-            <ArrowLeftIcon
-              color="black"
-              size={30}
+            <ArrowBackIcon
+              size="6" 
+              color="#464444" 
               style={{
                 alignSelf: "flex-start",
                 position: "absolute",
-                left: 32,
+                top: 2,
+                left: 40,
               }}
             />
           </TouchableOpacity>
-          <Title>Registrarse</Title>
+          <Text
+            mx="auto"
+            mt="-1.5"
+            mb="2"
+            fontFamily="body"
+            fontSize="3xl"
+            fontWeight="700"
+            color="#464444"
+          >Registrarse</Text>
         </View>
-        <Description>
+        <Text mt="22" mb="41" px="16" fontFamily="body" fontWeight="400" textAlign="center">
           Crea una cuenta para empezar a conectar con proveedores cerca de ti
-        </Description>
+        </Text>
         <ScrollView>
           <Input
             placeholder="Nombre y Apellido"
@@ -196,12 +211,12 @@ const Register: React.FC<RegisterProps> = ({ navigation }) => {
             onChangeText={(value) => handleInputChange("charge", value)}
           />
           <Button
-            disabled={isSubmitDisabled}
+            isLoading={isLoading}
+            disabled={isSubmitDisabled ? isSubmitDisabled : isLoading}
             width="320"
             height="60"
             borderRadius="15"
             bg={isSubmitDisabled ? "#808080" : "#981D9A"}
-            shadow="9"
             _pressed={{ bg: "#6f1570" }}
             onPress={handleSubmit}
           >

@@ -2,11 +2,11 @@ import styled from 'styled-components/native';
 import COLORS from "../../styles/theme" 
 
 export const Container = styled.View`
-padding-top:89px;
+padding-top:80px;
 flex: 1;
 align-items: center;
-justify-content: stretch; 
-width:80%;
+justify-content: center; 
+width:100%;
 `;
 
 export const Title = styled.Text`
@@ -18,15 +18,15 @@ export const Title = styled.Text`
 
 export const Description = styled.Text`
 font-family: "Outfit_300Light";
-font-size: 13px;
+font-size: 14px;
 width: 80%;
-margin-top: 34px;
-margin-bottom: 32px;
+margin-top: 25px;
+margin-bottom: 41px;
 text-align: center;
 `;
 
 export const Input = styled.TextInput`
-width: 322px;
+width: 320px;
 height: 59px;
 font-family: "Outfit_500Medium";
 font-size: 15px;
@@ -40,7 +40,7 @@ padding:20px;
 
 export const Button = styled.TouchableOpacity`
 
-width: 322px;
+width: 320px;
 height: 54px;
 background-color: #a0279e
 box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.12);
