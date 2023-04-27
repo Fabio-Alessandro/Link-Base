@@ -19,7 +19,9 @@
   <p align="center">
     Connecting enterprises with service providers
     <br></br>
-    <a href="https://www.youtube.com/">View Demo</a> · <a href="https://github.com/Fabio-Alessandro/Link-Base/issues">Report Bug</a> · <a href="https://github.com/Fabio-Alessandro/Link-Base/issues">Request Feature</a>
+    <a href="https://www.youtube.com/">View Demo</a> · 
+    <a href="https://github.com/Fabio-Alessandro/Link-Base/issues">Report Bug</a> · 
+    <a href="https://github.com/Fabio-Alessandro/Link-Base/issues">Request Feature</a>
   </p>
 </div>
 
