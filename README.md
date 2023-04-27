@@ -55,9 +55,15 @@
 
 ## About The Project
 
+<br></br>
 <div align="center">
   <img src="https://i.ibb.co/HTRYj3M/New-post-for-social-media-with-phone-screen-and-blurred-background.png" width="200px"/>
 </div>
+<br></br>
+
+This is an app that me and a small developer team created for NetGlobal Solutions. It connects a localized group of enterprises with nearby service providers, allowing them to write reviews and see their details. We created the full stack of the application and used tools like Figma to design the UI. 
+It is in constant improvement, keep an eye for new features!
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
@@ -193,7 +199,7 @@ Project Link: [https://github.com/Fabio-Alessandro/Link-Base](https://github.com
 [issues-shield]: https://img.shields.io/github/issues/Fabio-Alessandro/Link-Base.svg?style=for-the-badge
 [issues-url]: https://github.com/Fabio-Alessandro/Link-Base/issues
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/Fabio-Alessandro/Link-Base/blob/develop/LICENSE.txt
+[license-url]: https://github.com/Fabio-Alessandro/Link-Base/blob/main/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/fabio-alessandro-022a4a261/
 [TypeScript]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
