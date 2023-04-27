@@ -62,7 +62,7 @@
 ## About The Project
 
 <div align="center">
-  <img src="https://i.ibb.co/djpy0pr/Link-Base.png" width="200px"/>
+  <img src="https://i.ibb.co/HTRYj3M/New-post-for-social-media-with-phone-screen-and-blurred-background.png" width="200px"/>
 </div>
 
 
