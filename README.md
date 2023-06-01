@@ -19,7 +19,6 @@
   <p align="center">
     Connecting enterprises with service providers
     <br></br>
-    <a href="https://www.youtube.com/">View Demo</a> · 
     <a href="https://github.com/Fabio-Alessandro/Link-Base/issues">Report Bug</a> · 
     <a href="https://github.com/Fabio-Alessandro/Link-Base/issues">Request Feature</a>
   </p>
@@ -44,7 +43,6 @@
         <li><a href="#startup">Startup</a></li>
       </ul>
     </li>
-    <li><a href="#gallery">Gallery</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -140,16 +138,6 @@ On a different terminal; run the front-end (Leave the process open after it fini
 ```sh
 npm run client
 ```
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GALLERY -->
-
-## Gallery
-
-See the app in action: 
-
-[![YouTube][YouTube]][Youtube-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
